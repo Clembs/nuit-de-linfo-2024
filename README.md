@@ -1,38 +1,28 @@
-# sv
+# Nuit de l'info 2024 - SAE Fromage
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Manuel pour les développeurs
 
-## Creating a project
+## Installation du projet
 
-If you're seeing this, you've probably already done this step. Congrats!
+Le projet est un projet SvelteKit qui utilise Node.js et Bun. Pour l'installer, il suffit de :
 
-```bash
-# create a new project in the current directory
-npx sv create
+- Installer [Node.js](https://nodejs.org/)
+- Installer [Bun](https://bun.sh) pour la gestion des dépendences
+- Cloner le projet avec `git clone https://github.com/Clembs/nuit-de-linfo-2024`
+- Installer les dépendences avec `bun install`
+- Lancer le serveur web avec `bun dev`
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Structure du projet
 
-## Developing
+- `src/routes/` : Les pages du site
+- `src/lib/` : Les fonctions utilitaires (référencer avec `$lib/`)
+- `src/components/` : Les composants réutilisables (référencer avec `$components/`)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Conventions de nommage
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- Branches : `kebab-case` (ex: `creer-un-composant`)
+- Commits : `feat/fix/refactor: un message` (ex: `feat: Ajout d'un composant`, `fix: Correction d'un bug`)
+- Variables et fonctions : `camelCase` (ex: `const maConstante`, `let maVariable`, `function maFonction()`)
+- Nom de fichiers Svelte : `PascalCase` (ex: `MonComposant.svelte`)
+- Nom de fichiers TypeScript : `kebab-case` (ex: `mon-fichier.ts`)
+- Classes et IDs CSS : `kebab-case` (ex: `.ma-classe-css`)
