@@ -9,14 +9,17 @@ Le projet est un projet SvelteKit qui utilise Node.js et Bun. Pour l'installer, 
 - Installer [Node.js](https://nodejs.org/)
 - Installer [Bun](https://bun.sh) pour la gestion des dépendences
 - Cloner le projet avec `git clone https://github.com/Clembs/nuit-de-linfo-2024`
+- Se déplacer dans le dossier du projet avec `cd nuit-de-linfo-2024`
 - Installer les dépendences avec `bun install`
 - Lancer le serveur web avec `bun dev`
 
 ## Structure du projet
 
 - `src/routes/` : Les pages du site
-- `src/lib/` : Les fonctions utilitaires (référencer avec `$lib/`)
-- `src/components/` : Les composants réutilisables (référencer avec `$components/`)
+- `src/lib/` : Les fonctions utilitaires (imports depuis `$lib/`)
+- `src/components/` : Les composants réutilisables (imports depuis `$components/`)
+- `src/styles/` : Les styles globaux du site
+- `static/` : Les fichiers statiques (images, vidéos, etc.) qui ne sont pas du code (et ne seront pas compilés)
 
 ## Conventions de nommage
 
