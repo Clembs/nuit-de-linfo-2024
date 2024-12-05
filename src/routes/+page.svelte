@@ -1,10 +1,14 @@
-<h1>Bienvenue sur notre site</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Hero from '$lib/components/Hero.svelte';
+	import Navigation from '$lib/components/Header.svelte';
 
+	import '../styles/global.css';
+	import Depth1 from '$lib/components/Depth1.svelte';
+</script>
 
-<style>
-    :global(body){
-        background: linear-gradient(#4480dc,#234272);
+<Navigation />
 
-    }
-</style>
+<main>
+	<Hero />
+	<Depth1 />
+</main>
