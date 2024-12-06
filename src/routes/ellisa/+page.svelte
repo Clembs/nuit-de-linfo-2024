@@ -27,7 +27,7 @@
     let intervalId: number = -1;
     let inputElements: HTMLInputElement[] = []; // Array to hold input elements
     let selectedInputIndex: number = -1; // Index of the active input field
-    const years = Array.from({ length: 2024 - 1900 + 1 }, (_, i) => 1900 + i);
+    const years = shuffleArray(Array.from({ length: 2024 - 1900 + 1 }, (_, i) => 1900 + i));
     const months = Array.from({ length: 12 }, (_, i) => i + 1);
 
     // Get microphone stream
@@ -205,6 +205,14 @@
         }
     }
 
+
+    function shuffleArray(arr : number[]) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
+        }
+        return arr;
+    }
   </script>
 
   <head>
