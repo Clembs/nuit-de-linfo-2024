@@ -14,9 +14,13 @@
 </section>
 
 <style>
+
 	.container {
-		background-color: lightblue;
 		height: 100svh;
+    background-image: url('/fond_ile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 	}
 
 	.content {
@@ -105,4 +109,5 @@
 			}
 		}
 	}
+
 </style>

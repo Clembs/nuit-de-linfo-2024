@@ -1,12 +1,18 @@
 <section>
+	<div class="content">
+		<h1>Le phytoplancton: je sais pas</h1>
+	</div>
 	<div class="container">
 		<img src="phytoplancton.png" alt="Phytoplankton" class="Phytoplancton" />
 		<div class="overlay">
 			<div class="text">
-				Poumons et oxygénation vs phytoplancton et production d'oxygène :<br />
-				Les poumons permettent l'oxygénation du corps humain, tandis que les océans (via le phytoplancton)
-				<br />
-				produisent une grande partie de l'oxygène que nous respirons
+				<p>Le saviez vous ? Nos poumons sont super importants : <br>
+				Ils nous aident à respirer en absorbant l’oxygène et en rejetant le dioxyde de carbone.<br>
+				Eh bien, l’océan fait un peu pareil ! Grâce au phytoplancton, ces toutes petites plantes dans l’eau, <br>
+				il produit plus de la moitié de l’oxygène qu’on respire. Incroyable, non ? <br>
+				Mais attention, tout comme nos poumons peuvent être abîmés par la pollution de l’air,<br>
+				l’océan est fragilisé par les déchets et trop de CO2. <br>
+				Alors, en protégeant les océans, on prend soin de ce qui nous permet de respirer !</p>
 			</div>
 		</div>
 	</div>
@@ -37,15 +43,15 @@
 		position: absolute;
 		top: 4rem;
 		left: 5rem;
-		height: 13rem;
+		height: 26rem;
 		width: 30rem;
 		opacity: 0;
 		transition: 0.5s ease;
-		background: linear-gradient(90deg, #3b3b3b 0%, #243963 100%);
+		background: linear-gradient(90deg, rgba(59, 59, 59, 0.85) 0%, rgba(36, 57, 99, 0.85) 100%);
 		border-radius: 0.5rem;
 	}
 
-	section:hover .overlay {
+	.container:hover .overlay {
 		opacity: 1;
 	}
 
@@ -61,6 +67,26 @@
 	.Phytos {
 		position: relative;
 		left: 80rem;
-		top: 20rem;
+		top: 16rem;
 	}
+
+  .content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      max-width: 1440px;
+      margin: 0 auto;
+  }
+
+  h1 {
+      padding-top: 4rem;
+
+      max-width: 896px;
+
+      font-size: 3rem;
+      line-height: 1;
+
+			color:white;
+  }
+
 </style>
