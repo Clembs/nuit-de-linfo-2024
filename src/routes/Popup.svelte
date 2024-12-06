@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type PopupContents } from '$lib/image';
+	import { type PopupContents } from '$lib/PopupContents';
 
 	let {
         images,
