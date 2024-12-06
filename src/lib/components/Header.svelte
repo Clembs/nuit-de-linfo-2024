@@ -18,6 +18,9 @@
 	header {
 		z-index: 50;
 		position: fixed;
+		left: 50%;
+		transform: translate(-50%, 0);
+
 		width: 100%;
 
 		display: flex;
@@ -26,5 +29,8 @@
 
 		height: 5rem; /* 80px */
 		padding: 0 2rem;
+
+		max-width: 1440px;
+		margin: 0 auto;
 	}
 </style>
