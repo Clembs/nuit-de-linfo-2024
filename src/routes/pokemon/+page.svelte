@@ -1,38 +1,60 @@
-<h1>Génération de QR Code</h1>
 <script>
-	let URL = $state();
-    let scoops = $state();
-    function generate() {
+    let URL = '';
+    let scoops = '';
+    let base64Image = '';
+
+    async function generateQRCode() {
+
+        const response = await fetch('/pokemon', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ URL, pokemon: scoops })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            base64Image = data.base64;
+        } else {
+            console.error('Erreur lors de la génération du QR code');
+        }
     }
 </script>
-<p>Entrer son URL ici :</p>
 
-<p><input bind:value={URL} /></p>
+<h1>QR Code Pokemon</h1>
 
-<p>{#each ["herbizarre", "tortank", "salamèche", "luxray"] as pokemon}
-	<label>
-		<input
-			type="radio"
-			name="pokemons"
-			value={pokemon}
-			bind:group={scoops}
-		/>
+<form on:submit={generateQRCode}>
+    <p>Entrer son URL ici :</p>
+    <p><input name="URL" bind:value={URL} /></p>
 
-		{pokemon}
-        {#if pokemon == "herbizarre"}
-            <img  src="./herbizarre.png" alt = "herbizarre" width="100" height="100"/>
-        {:else if pokemon == "tortank"}
-            <img  src="./tortank.jpg" alt = "tortank" width="100" height="100"/>
-        {:else if pokemon == "salamèche"}
-            <img  src="./salamèche.png" alt = "salamèche" width="80" height="100"/>
-        {:else if pokemon == "luxray"}
-            <img  src="./luxray.png" alt = "luxray" width="100" height="100"/>
-        {/if}
-	</label>
-{/each}</p> 
+    <p>
+        {#each ["herbizarre", "boguerisse", "rotiflam", "luxray", "voltorbe", "lokhlass"] as pokemon}
+            <label>
+                <input
+                    type="radio"
+                    name="pokemon"
+                    value={pokemon}
+                    bind:group={scoops}
+                />
+                {pokemon}
+                <img 
+                    src={`./${pokemon}.png`} 
+                    alt={pokemon} 
+                    width="100" 
+                    height="100"
+                    style="display: inline-block; margin-left: 10px;"
+                />
+            </label>
+        {/each}
+    </p>
 
-<form onsubmit={generate}>
     <button disabled={!URL || !scoops} type="submit">
-		Generate Pokemon QR Code
-	</button>
+        Générer le QR Code
+    </button>
 </form>
+
+{#if base64Image}
+    <h2>QR Code généré :</h2>
+    <img src={`data:image/png;base64,${base64Image}`} alt="QR Code" width="200" />
+{/if}
