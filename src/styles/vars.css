@@ -11,6 +11,7 @@
 
 	--color-background: var(--neutral-0);
 	--color-on-background: var(--neutral-50);
+	--color-on-background-variant: var(--neutral-40);
 	--color-primary: var(--primary-30);
 	--color-on-primary: var(--neutral-0);
 	--color-primary-variant: var(--primary-40);
