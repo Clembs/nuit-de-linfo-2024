@@ -3,12 +3,12 @@
 	import Navigation from '$lib/components/Header.svelte';
 
 	import '../styles/global.css';
-	import Depth1 from '$lib/components/Depth1.svelte';
+	import Phytoplancton from '$lib/components/Phytoplancton.svelte';
 </script>
 
 <Navigation />
 
 <main>
 	<Hero />
-	<Depth1 />
+	<Phytoplancton />
 </main>
