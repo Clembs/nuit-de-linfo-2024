@@ -1,0 +1,22 @@
+:root {
+	--neutral-0: #ebf6fa;
+	--neutral-10: #b6e1ec;
+	--neutral-20: #24748f;
+	--neutral-30: #1f5c7a;
+	--neutral-40: #153351;
+	--neutral-50: #0a0f29;
+
+	--primary-30: #0252ab;
+	--primary-40: #013a79;
+
+	--color-background: var(--neutral-0);
+	--color-on-background: var(--neutral-50);
+	--color-on-background-variant: var(--neutral-40);
+	--color-primary: var(--primary-30);
+	--color-on-primary: var(--neutral-0);
+	--color-primary-variant: var(--primary-40);
+	--color-surface: var(--neutral-10);
+	--color-on-surface: var(--neutral-50);
+
+	--font-family: 'Geist', system-ui, sans-serif;
+}
