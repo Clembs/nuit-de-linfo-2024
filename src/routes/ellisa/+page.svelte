@@ -2,8 +2,10 @@
     import { onDestroy } from 'svelte'; 
 
     // Declare variables
+    let height : number = 100;
     let buttonEnregistrement :HTMLButtonElement;
     let humanVerif : HTMLDivElement;
+    let paperShredder : HTMLImageElement;
 
     let box1 : HTMLButtonElement;
     let box2 :  HTMLButtonElement;
@@ -15,7 +17,7 @@
     let box8 :  HTMLButtonElement;
     let box9 :  HTMLButtonElement;
     let changedBox : HTMLButtonElement;
-
+    let feedback : HTMLDivElement;
     let difficulty : number = 50;
 
     let numberClicks : number = 0;
@@ -213,6 +215,11 @@
         }
         return arr;
     }
+
+    function elongate(){
+        height+=50;
+    }
+
   </script>
 
   <head>
@@ -277,3 +284,10 @@
     </div>
   </div>
   
+  <br>
+  <div bind:this={feedback} style="position: fixed; bottom: 0; right: 0;border-style: ridge; padding:10px; height : {height}px; ">
+    <button onclick={elongate}><img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" alt="feedback" width="10px" height="10px"></button>
+    <p>Feedback:</p> 
+    <textarea  cols="30" rows="10"></textarea><br>
+    <button>Envoyer</button>
+  </div>
