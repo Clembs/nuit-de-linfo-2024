@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { type PopupContents } from '$lib/PopupContents';
+	import type { Snippet } from 'svelte';
 
 	let {
         images,
 		title,
-        graphic,
+        children: graphic,
         text
-	}: PopupContents = $props();
+	}: PopupContents & {
+		children: Snippet;
+	} = $props();
 
 	let isVisible = $state(false);
 	let dialog: HTMLDialogElement;
@@ -26,9 +29,7 @@
 </script>
 
 <button class="image-with-modal" {onclick}>
-	<figure>
-		<img src={graphic.src} alt={graphic.alt} />
-	</figure>
+	{@render graphic()}
 </button>
 
 <dialog class="image-modal" bind:this={dialog}>
@@ -66,10 +67,6 @@
 		border: 0;
 		padding: 0;
         background-color: transparent;
-
-		figure {
-			margin: 0rem;
-		}
 	}
 
     .modal-div {
