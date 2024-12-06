@@ -3,10 +3,10 @@
 	import type { Snippet } from 'svelte';
 
 	let {
-        images,
+		images,
 		title,
-        children: graphic,
-        text
+		children: graphic,
+		text
 	}: PopupContents & {
 		children: Snippet;
 	} = $props();
@@ -33,20 +33,19 @@
 </button>
 
 <dialog class="image-modal" bind:this={dialog}>
-    <button class="btn-close" {onclick} aria-label="Ferme la pop-up">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#000000"
-            ><path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            /></svg
-        >
-    </button>
+	<button class="btn-close" {onclick} aria-label="Ferme la pop-up">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			height="24px"
+			viewBox="0 -960 960 960"
+			width="24px"
+			fill="#000000"
+			><path
+				d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+			/></svg
+		>
+	</button>
 	<div class="modal-div">
-
 		<ul class="images-container">
 			{#each images as image}
 				<li>
@@ -66,15 +65,15 @@
 		cursor: zoom-in;
 		border: 0;
 		padding: 0;
-        background-color: transparent;
+		background-color: transparent;
 	}
 
-    .modal-div {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        gap: 1rem;
-    }
+	.modal-div {
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+		gap: 1rem;
+	}
 
 	.image-modal {
 		border: 0;
@@ -85,7 +84,7 @@
 		box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.3);
 		position: relative;
 		max-width: 80%;
-        list-style: none;
+		list-style: none;
 
 		.btn-close {
 			position: absolute;
@@ -104,17 +103,17 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
-            flex-shrink: 0;
-            height: 100vh;
+			flex-shrink: 0;
+			height: 100vh;
 
-            li {
-                height: 100%;
-            }
+			li {
+				height: 100%;
+			}
 		}
 
 		img {
-            max-width: 100%;
-            height: auto;
+			max-width: 100%;
+			height: auto;
 			/* max-width: 50%; */
 			object-fit: contain;
 
