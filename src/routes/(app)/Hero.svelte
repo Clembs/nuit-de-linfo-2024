@@ -6,13 +6,13 @@
 	<div class="content">
 		<h1>L'océan et nous: un corps, une planète à préserver</h1>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, odio eu suscipit
-			scelerisque, libero ante mollissection.
+			Suivez-nous dans un voyage interactif pour découvrir comment l'océan et notre corps se
+			ressemblent et pourquoi il est si important de le protéger. Cliquez sur les différents
+			éléments pour en savoir plus.
 		</p>
 
 		<div class="actions">
-			<Button inline href="#">Dive in</Button>
-			<Button inline variant="filled-dark" href="#">Learn more</Button>
+			<Button inline href="#">Plonger dedans</Button>
 		</div>
 	</div>
 </section>

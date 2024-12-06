@@ -28,8 +28,23 @@
 				width="150"
 			/>
 		</ModalDetails>
+		<ModalDetails
+			title="Le phytoplancton"
+			text="Le saviez vous ? Nos poumons sont super importants : <br />
+				Ils nous aident à respirer en absorbant l’oxygène et en rejetant le dioxyde de carbone.<br
+				/>
+				Eh bien, l’océan fait un peu pareil ! Grâce au phytoplancton, ces toutes petites plantes dans
+				l’eau, <br />
+				il produit plus de la moitié de l’oxygène qu’on respire. Incroyable, non ? <br />
+				Mais attention, tout comme nos poumons peuvent être abîmés par la pollution de l’air,<br
+				/>
+				l’océan est fragilisé par les déchets et trop de CO2. <br />
+				Alors, en protégeant les océans, on prend soin de ce qui nous permet de respirer !"
+			images={[]}
+		>
+			<img class="Phytos" src="/home/interactive/phytoplanctons.png" alt="Phytos" width="300" />
+		</ModalDetails>
 	</div>
-	<img class="Phytos" src="/home/interactive/phytoplanctons.png" alt="Phytos" width="300" />
 </section>
 
 <style>
