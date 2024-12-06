@@ -1,20 +1,74 @@
-@import 'colors.css';
+@import './vars.css';
 
-* {
-	margin: 0;
-	padding: 0;
+@font-face {
+	font-family: 'Geist';
+	font-weight: 200 900;
+	src: url('/fonts/Geist[wght].woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Outfit', sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	font-family: var(--font-family);
+	background-color: var(--color-background);
+	color: var(--color-on-background-variant);
+	accent-color: var(--color-primary);
+	caret-color: var(--color-primary);
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+*::selection {
+	background-color: var(--color-primary);
+	color: var(--color-on-primary);
+}
+
+img,
+video,
+iframe,
+picture,
+canvas {
+	max-width: 100%;
+	height: auto;
 }
 
 a {
+	color: var(--color-primary);
 	text-decoration: none;
-	color: inherit;
+
+	&.link {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
-a:hover {
-	text-decoration: underline;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	overflow-wrap: break-word;
+	color: var(--color-on-background);
+}
+
+p {
+	color: var(--color-on-background-variant);
 }
