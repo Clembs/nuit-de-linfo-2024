@@ -1,6 +1,15 @@
+<script>
+	import Coraux from '$lib/components/Coraux.svelte';
+	import CourantEtreVivant from '$lib/components/CourantEtreVivant.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import Phytoplancton from '$lib/components/Phytoplancton.svelte';
+	import Profondeur from '$lib/components/Profondeur.svelte';
+</script>
+
 <main>
-	<h1>Welcome to SvelteKit</h1>
-	<p>
-		Visit <a class="link" href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-	</p>
+	<Hero />
+	<Phytoplancton />
+	<Coraux />
+	<CourantEtreVivant />
+	<Profondeur />
 </main>
