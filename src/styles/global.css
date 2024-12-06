@@ -1,0 +1,21 @@
+@import './vars.css';
+
+@font-face {
+	font-family: 'Geist';
+	font-weight: 200 900;
+	src: url('/fonts/Geist[wght].woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-background);
+	color: var(--color-on-background);
+}
