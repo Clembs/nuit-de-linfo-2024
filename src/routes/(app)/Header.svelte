@@ -1,36 +1,60 @@
 <header>
-	<span class="logo">Bocean</span>
+	<span>Bocean</span>
+	<a href="/">Page principale</a>
 
 	<nav>
-		<a href="Jeu 1">Jeu 1</a>
-		<a href="Jeu 2">Jeu 2</a>
-		<a href="Jeu 3">Jeu 3</a>
-		<a href="Jeu 4">Jeu 4</a>
-		<a href="Jeu 5">Jeu 5</a>
+		<b>Défis</b>
+
+		<a href="/cookie">Cookie Clicker</a>
+		<a href="/pokemon">Catch them All</a>
+		<a href="/ellisa">Formulaire impossible</a>
+		<a href="/captcha">Résoudre un captcha</a>
 	</nav>
 </header>
 
 <style>
-	.logo {
-		font-size: 1.5rem;
-		line-height: 2rem;
-	}
 	header {
-		z-index: 50;
-		position: fixed;
-		left: 50%;
-		transform: translate(-50%, 0);
-
-		width: 100%;
-
+		height: 5rem;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
 
-		height: 5rem; /* 80px */
 		padding: 0 2rem;
 
-		max-width: 1440px;
-		margin: 0 auto;
+		margin-bottom: 2rem;
+
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+
+		nav {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		header {
+			height: auto;
+			padding: 2rem;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 1rem;
+
+			nav {
+				flex-direction: column;
+				gap: 0.5rem;
+				align-items: flex-start;
+			}
+		}
 	}
 </style>
