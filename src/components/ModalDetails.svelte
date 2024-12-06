@@ -62,7 +62,7 @@
 		</ul>
 		<div class="text-container">
 			<h2>{title}</h2>
-			<p>{text}</p>
+			<p>{@html text}</p>
 		</div>
 	</div>
 </div>

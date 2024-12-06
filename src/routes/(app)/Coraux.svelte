@@ -4,7 +4,7 @@
 
 <section>
 	<div class="content">
-		<h1>Les Coraux: je sais pas</h1>
+		<h1>Les coraux</h1>
 	</div>
 	<div class="container">
 		<ModalDetails
@@ -13,7 +13,7 @@
 				Le polluer avec tous ces sacs plastique ça revient à rendre l'océan  vulnérable, un peu comme un corps sans défense face aux maladies. Alors, en préservant les récifs coralliens, on aide l’océan à rester fort et en bonne santé. C’est super important !"
 			images={[]}
 		>
-			<img src="corail.png" alt="Corail" class="Corail" />
+			<img src="/home/interactive/corail.png" alt="Corail" class="Corail" />
 		</ModalDetails>
 	</div>
 </section>
@@ -28,38 +28,28 @@
 	}
 
 	.container {
-		top: 12rem;
-		left: 7rem;
 		position: relative;
+		top: 14rem;
+		left: 6rem;
+
+		&:hover img {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				background-image: url('/home/interactive/bubbles-overlay.gif');
+			}
+		}
 	}
 
 	.Corail {
 		display: block;
-	}
-
-	.overlay {
-		position: absolute;
-		top: 1rem;
-		left: 20rem;
-		height: 19rem;
-		width: 40rem;
-		opacity: 0;
-		transition: 0.5s ease;
-		background: linear-gradient(90deg, rgba(59, 59, 59, 0.85) 0%, rgba(36, 57, 99, 0.85) 100%);
-		border-radius: 0.5rem;
-	}
-
-	.container:hover .overlay {
-		opacity: 1;
-	}
-
-	.text {
-		color: white;
-		font-size: 1.3rem;
-		position: absolute;
-		top: 5%;
-		left: 5%;
-		right: 5%;
 	}
 
 	.content {
@@ -68,15 +58,6 @@
 
 		max-width: 1440px;
 		margin: 0 auto;
-	}
-
-	.text {
-		color: white;
-		font-size: 1.3rem;
-		position: absolute;
-		top: 5%;
-		left: 5%;
-		right: 5%;
 	}
 
 	h1 {
