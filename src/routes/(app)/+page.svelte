@@ -1,9 +1,9 @@
 <script>
-	import Coraux from '$lib/components/Coraux.svelte';
-	import CourantEtreVivant from '$lib/components/CourantEtreVivant.svelte';
-	import Hero from '$lib/components/Hero.svelte';
-	import Phytoplancton from '$lib/components/Phytoplancton.svelte';
-	import Profondeur from '$lib/components/Profondeur.svelte';
+	import Coraux from './Coraux.svelte';
+	import CourantEtreVivant from './CourantEtreVivant.svelte';
+	import Hero from './Hero.svelte';
+	import Phytoplancton from './Phytoplancton.svelte';
+	import Profondeur from './Profondeur.svelte';
 </script>
 
 <main>

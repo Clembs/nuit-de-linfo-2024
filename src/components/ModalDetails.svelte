@@ -24,15 +24,9 @@
 	} = $props();
 
 	let isVisible = $state(false);
-	let dialog = $state<HTMLDialogElement>();
 
 	function toggleModal() {
 		isVisible = !isVisible;
-		if (isVisible) {
-			dialog?.showModal();
-		} else {
-			dialog?.close();
-		}
 	}
 </script>
 
@@ -40,7 +34,7 @@
 	{@render children()}
 </button>
 
-<dialog class="image-modal" bind:this={dialog}>
+<div role="dialog" class="image-modal" class:open={isVisible}>
 	<button
 		class="btn-close"
 		onclick={toggleModal}
@@ -71,7 +65,11 @@
 			<p>{text}</p>
 		</div>
 	</div>
-</dialog>
+</div>
+
+{#if isVisible}
+	<div class="backdrop" inert={isVisible}></div>
+{/if}
 
 <style>
 	.image-with-modal {
@@ -90,6 +88,16 @@
 		max-width: 80%;
 		list-style: none;
 		background-color: var(--color-background);
+		display: none;
+
+		&.open {
+			display: block;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 9;
+		}
 
 		.modal-div {
 			display: flex;
@@ -134,10 +142,16 @@
 			padding: 1rem;
 			padding-top: 0;
 		}
+	}
 
-		&::backdrop {
-			background-color: rgba(0, 0, 0, 0.75);
-			backdrop-filter: blur(5px);
-		}
+	.backdrop {
+		content: '';
+		position: fixed;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.75);
+		backdrop-filter: blur(5px);
+		z-index: 0;
+		width: 100vw;
+		height: 100vh;
 	}
 </style>
