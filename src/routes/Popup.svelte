@@ -76,6 +76,7 @@
         display: flex;
         flex-direction: row;
         list-style: none;
+        gap: 1rem;
     }
 
 	.image-modal {
@@ -100,18 +101,25 @@
 		}
 
 		.images-container {
-			/* display: flex;
+			display: flex;
 			flex-direction: column;
-			flex-wrap: wrap; */
+			/* flex-wrap: wrap; */
 			list-style: none;
 			margin: 0;
 			padding: 0;
             flex-shrink: 0;
+            height: 100vh;
+
+            li {
+                height: 100%;
+            }
 		}
 
 		img {
-			max-width: 50%;
-			object-fit: cover;
+            max-width: 100%;
+            height: auto;
+			/* max-width: 50%; */
+			object-fit: contain;
 
 			@media (max-width: 900px) {
 				max-width: 100%;
