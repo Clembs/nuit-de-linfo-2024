@@ -18,7 +18,7 @@
 <style>
 	section {
 		height: 100svh;
-		background-image: url('/underwater.jpg');
+		background-image: url('/fond_haut.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -35,8 +35,8 @@
 
 	.overlay {
 		position: absolute;
-		top: 5rem;
-		left: 7rem;
+		top: 4rem;
+		left: 5rem;
 		height: 13rem;
 		width: 30rem;
 		opacity: 0;
@@ -45,7 +45,7 @@
 		border-radius: 0.5rem;
 	}
 
-	.container:hover .overlay {
+	section:hover .overlay {
 		opacity: 1;
 	}
 
